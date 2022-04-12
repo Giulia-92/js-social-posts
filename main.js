@@ -71,17 +71,17 @@ function stampaPost(){
             <div class="post__header">
             <div class="post-meta">                    
                 <div class="post-meta__icon">
-                    <img class="profile-pic" src="${posts[i].image}" alt=" ${posts[i].name}">                    
+                    <img class="profile-pic" src="${posts[i].author.image}" alt="${posts[i].author.name} ">                    
                 </div>
                 <div class="post-meta__data">
-                    <div class="post-meta__author"> ${posts[i].name}</div>
+                    <div class="post-meta__author"> ${posts[i].author.name}</div>
                     <div class="post-meta__time"> ${posts[i].created}</div>
                 </div>                    
             </div>
         </div>
         <div class="post__text"> ${posts[i].content}</div>
         <div class="post__image">
-            <img ${posts[i].image}
+            <img ${posts[i].media}
             src=" ${posts[i].media}" alt="">
         </div>
         <div class="post__footer">
