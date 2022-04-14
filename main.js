@@ -102,3 +102,17 @@ function stampaPost(){
     }
     postContainer.innerHTML = item; 
 }
+
+document.querySelector(".like-button__label").addEventListener("click", function(){
+    let colore = play();
+    function play(){
+        this.style="#0CD977";
+        
+        }
+    })
+
+
+
+
+
+    
