@@ -103,13 +103,14 @@ function stampaPost(){
     postContainer.innerHTML = item; 
 }
 
-document.querySelector(".like-button__label").addEventListener("click", function(){
-    let colore = play();
-    function play(){
-        this.style="#0CD977";
-        
+document.querySelector(".likes__cta").addEventListener("click", function(){
+    
+        console.log('ciao');
+        const azz = document.getElementsByClassName(".like-button__label");
+        console.log(azz);
+        //this.style.color ="rgb(60, 101, 177)";
         }
-    })
+    )
 
 
 
