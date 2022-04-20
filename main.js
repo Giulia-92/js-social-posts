@@ -71,7 +71,7 @@ function stampaPost(){
             <div class="post__header">
             <div class="post-meta">                    
                 <div class="post-meta__icon">
-                    <img class="profile-pic" src="${posts[i].author.image}" alt="${posts[i].author.name} ">                    
+                    <img class="profile-pic" src="${posts[i].author.image}" alt="${posts[i].author.name} ">                   
                 </div>
                 <div class="post-meta__data">
                     <div class="post-meta__author"> ${posts[i].author.name}</div>
@@ -82,28 +82,37 @@ function stampaPost(){
         <div class="post__text"> ${posts[i].content}</div>
         <div class="post__image">
             <img ${posts[i].media}
-            src=" ${posts[i].media}" alt="">
+            src=" ${posts[i].media}" alt="Immagine post di ${posts[i].author.name}">
         </div>
         <div class="post__footer">
             <div class="likes js-likes">
                 <div class="likes__cta">
-                    <a class="like-button  js-like-button" href="#" data-postid="1">
+                    <a class="like-button  js-like-button" href="#" data-postid="${posts[i].id}">
                         <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
                         <span class="like-button__label">Mi Piace</span>
                     </a>
                 </div>
                 <div class="likes__counter">
-                    Piace a <b id="like-counter-1" class="js-likes-counter">80</b> persone
+                    Piace a <b id="like-counter-1" class="js-likes-counter">${posts[i].likes}</b> persone
                 </div>
             </div> 
         </div>            
     </div>
     ` 
     }
-    postContainer.innerHTML = item; 
+    postContainer.innerHTML += item; 
 }
 
-document.querySelector(".likes__cta").addEventListener("click", function(){
+/*const userLikes =[];
+function attachEvent(){
+const likesButton = document.querySelectorAll('[data-postid]')
+console.log(likesButton);
+}
+
+
+
+
+/*addEventListener("click", function(){
     
         console.log('ciao');
         const butt = document.getElementsByClassName(".like-button__label");
@@ -116,4 +125,5 @@ document.querySelector(".likes__cta").addEventListener("click", function(){
 
 
 
-    
+
+    */
